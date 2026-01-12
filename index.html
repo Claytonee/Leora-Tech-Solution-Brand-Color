@@ -28,44 +28,62 @@
         header {
             background-color: var(--gondola-black);
             color: white;
-            padding: 60px 20px;
+            /* Header imekuwa fupi zaidi sasa */
+            padding: 20px 15px;
             text-align: center;
-            border-bottom: 5px solid var(--klein-blue);
+            border-bottom: 4px solid var(--klein-blue);
+        }
+
+        .header-logo {
+            max-width: 120px; /* Logo imepunguzwa ukubwa */
+            height: auto;
+            margin-bottom: 10px;
+            display: inline-block;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
-            letter-spacing: 2px;
+            font-size: 1.8rem; /* Font imepunguzwa ili isichukue nafasi kubwa */
+            letter-spacing: 1px;
             font-weight: 800;
+            line-height: 1.2;
         }
 
         header span.leora { color: var(--klein-blue); }
         header span.tech { color: var(--turquoise); }
         header span.solutions { color: var(--leora-red); }
 
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
         .container {
-            max-width: 1400px; /* Nimeongeza upana ili kadi 4 zenye maneno mengi zitoshee vizuri */
-            margin: 40px auto;
+            max-width: 1400px;
+            margin: 30px auto;
             padding: 0 20px;
         }
 
         .intro {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 35px;
+        }
+
+        .intro h2 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
         }
 
         .intro p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #555;
             max-width: 800px;
             margin: 0 auto;
         }
 
-        /* Color Card Styles */
         .color-grid {
             display: grid;
-            /* Hapa ndipo tunapozilazimisha kadi 4 kukaa mstari mmoja kwenye PC */
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
         }
@@ -76,29 +94,25 @@
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             transition: transform 0.3s ease;
-            border: 2px solid transparent; 
             display: flex;
             flex-direction: column;
         }
 
-        /* Hapa tunaweka border kwa kila rangi kama ulivyotaka */
         .blue-border { border: 2px solid var(--klein-blue); }
         .turquoise-border { border: 2px solid var(--turquoise); }
         .red-border { border: 2px solid var(--leora-red); }
         .black-border { border: 2px solid var(--gondola-black); }
 
-        .card:hover {
-            transform: translateY(-10px);
-        }
+        .card:hover { transform: translateY(-10px); }
 
         .color-preview {
-            height: 120px;
+            height: 100px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 0.9rem;
             text-align: center;
             padding: 10px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
@@ -111,7 +125,7 @@
 
         .card-content h2 {
             margin-top: 0;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             display: flex;
             flex-direction: column;
             gap: 5px;
@@ -130,45 +144,42 @@
         .tagline {
             font-style: italic;
             color: #666;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             display: block;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         ul {
             padding-left: 18px;
             margin: 0;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
-        li {
-            margin-bottom: 8px;
-        }
+        li { margin-bottom: 6px; }
 
         .highlight-box {
             background: #f9f9f9;
             border-left: 4px solid #ddd;
-            padding: 12px;
+            padding: 10px;
             margin-top: 15px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
 
         .secondary-colors {
-            margin-top: 60px;
+            margin-top: 50px;
             background: var(--stratos);
             color: white;
-            padding: 40px;
+            padding: 30px;
             border-radius: 15px;
         }
 
         .footer {
             text-align: center;
-            padding: 40px;
-            font-size: 0.9rem;
+            padding: 30px;
+            font-size: 0.85rem;
             color: #888;
         }
 
-        /* Footer Color Classes */
         .f-leora { color: var(--klein-blue); font-weight: bold; }
         .f-tech { color: var(--turquoise); font-weight: bold; }
         .f-solutions { color: var(--leora-red); font-weight: bold; }
@@ -177,21 +188,22 @@
         .digit-3 { color: var(--leora-red); font-weight: bold; }
         .digit-4 { color: var(--blue-ribbon); font-weight: bold; }
 
-        /* Responsive kwa ajili ya Simu na Tablet */
         @media (max-width: 1024px) {
             .color-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 600px) {
             .color-grid { grid-template-columns: 1fr; }
-            header h1 { font-size: 1.8rem; }
+            header h1 { font-size: 1.5rem; }
+            .header-logo { max-width: 100px; }
         }
     </style>
 </head>
 <body>
 
 <header>
+    <img src="https://res.cloudinary.com/dwpfd5nak/image/upload/v1768254122/Leora_Tech_Solutions_v1_h9vmee.png" alt="Leora Tech Solutions Logo" class="header-logo">
     <h1><span class="leora">LEORA</span> <span class="tech">TECH</span> <span class="solutions">SOLUTIONS</span></h1>
-    <p style="margin-top: 10px; opacity: 0.8;">Falsafa ya Rangi na Utambulisho wa Brand</p>
+   
 </header>
 
 <div class="container">
@@ -268,15 +280,14 @@
 
     <div class="secondary-colors">
         <h3>Supportive Gradients & Hierarchy</h3>
-        <p>Rangi hizi hutumika kusaidia muonekano wa UI (User Interface) na background layers bila kupigana na rangi kuu.</p>
-        <div style="display: flex; gap: 20px; margin-top: 20px;">
+        <div style="display: flex; gap: 20px; margin-top: 15px;">
             <div style="flex: 1;">
                 <div style="height: 10px; background: var(--stratos); border-radius: 5px;"></div>
-                <p><strong>Stratos (#00085B)</strong> - Kwa ajili ya kina (Depth).</p>
+                <p style="margin: 5px 0;"><strong>Stratos (#00085B)</strong> - Depth.</p>
             </div>
             <div style="flex: 1;">
                 <div style="height: 10px; background: var(--blue-ribbon); border-radius: 5px;"></div>
-                <p><strong>Blue Ribbon (#0E4DFF)</strong> - Kwa ajili ya uimarishaji.</p>
+                <p style="margin: 5px 0;"><strong>Blue Ribbon (#0E4DFF)</strong> - Strength.</p>
             </div>
         </div>
     </div>
