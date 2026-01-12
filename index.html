@@ -75,7 +75,15 @@
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             transition: transform 0.3s ease;
+            /* Tumeset border iwe 2px kama ile ya red */
+            border: 2px solid transparent; 
         }
+
+        /* Hapa tunaweka border kwa kila rangi kama ile design ya Red */
+        .blue-border { border: 2px solid var(--klein-blue); }
+        .turquoise-border { border: 2px solid var(--turquoise); }
+        .red-border { border: 2px solid var(--leora-red); }
+        .black-border { border: 2px solid var(--gondola-black); }
 
         .card:hover {
             transform: translateY(-10px);
@@ -137,11 +145,6 @@
             font-size: 0.95rem;
         }
 
-        /* Special Red Styling */
-        .card.priority {
-            border: 2px solid var(--leora-red);
-        }
-
         .secondary-colors {
             margin-top: 60px;
             background: var(--stratos);
@@ -156,6 +159,15 @@
             font-size: 0.9rem;
             color: #888;
         }
+
+        /* --- New Footer Specific Styles --- */
+        .f-leora { color: var(--klein-blue); font-weight: bold; }
+        .f-tech { color: var(--turquoise); font-weight: bold; }
+        .f-solutions { color: var(--leora-red); font-weight: bold; }
+        .digit-1 { color: var(--klein-blue); font-weight: bold; }
+        .digit-2 { color: var(--turquoise); font-weight: bold; }
+        .digit-3 { color: var(--leora-red); font-weight: bold; }
+        .digit-4 { color: var(--blue-ribbon); font-weight: bold; }
 
         @media (max-width: 600px) {
             header h1 { font-size: 1.8rem; }
@@ -176,7 +188,7 @@
     </div>
 
     <div class="color-grid">
-        <div class="card">
+        <div class="card blue-border">
             <div class="color-preview" style="background-color: var(--klein-blue);">INTERNATIONAL KLEIN BLUE</div>
             <div class="card-content">
                 <h2>Uongozi & Imani <span class="hex-code">#0127BC</span></h2>
@@ -186,13 +198,13 @@
                     <li><strong>Taasisi Kubwa:</strong> Rangi inayotumiwa na mifumo rasmi na serikali.</li>
                     <li><strong>Professional:</strong> Inafanya brand ionekane "Investor-ready".</li>
                 </ul>
-                <div class="highlight-box">
+                <div class="highlight-box" style="border-left-color: var(--klein-blue);">
                     Hii ndiyo rangi ya neno <strong>LEORA</strong>. Inalenga kuonyesha uthabiti kwenye sekta ya IT, Afya na Elimu.
                 </div>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card turquoise-border">
             <div class="color-preview" style="background-color: var(--turquoise); color: #000;">BRIGHT TURQUOISE</div>
             <div class="card-content">
                 <h2>Ubunifu & Future <span class="hex-code">#17D9F9</span></h2>
@@ -202,13 +214,13 @@
                     <li><strong>Vibrant:</strong> Inatoa hisia ya mwendo, uhai na muunganiko.</li>
                     <li><strong>Tech Identity:</strong> Rangi ya startups za kisasa.</li>
                 </ul>
-                <div class="highlight-box">
+                <div class="highlight-box" style="border-left-color: var(--turquoise);">
                     Imetengwa kwa ajili ya neno <strong>TECH</strong>. Inaonyesha kuwa Leora si kampuni ya zamani, bali ni ya kizazi kijacho.
                 </div>
             </div>
         </div>
 
-        <div class="card priority">
+        <div class="card red-border">
             <div class="color-preview" style="background-color: var(--leora-red);">RED (SULUHISHO)</div>
             <div class="card-content">
                 <h2>Utekelezaji & Matokeo <span class="hex-code">#F20002</span></h2>
@@ -224,7 +236,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card black-border">
             <div class="color-preview" style="background-color: var(--gondola-black);">GONDOLA BLACK</div>
             <div class="card-content">
                 <h2>Mamlaka & Premium <span class="hex-code">#000000</span></h2>
@@ -234,6 +246,9 @@
                     <li><strong>Premium:</strong> Inafanya huduma za Leora zionekane zenye thamani kubwa.</li>
                     <li><strong>Focus:</strong> Inasaidia rangi nyingine kung'ara zaidi.</li>
                 </ul>
+                <div class="highlight-box" style="border-left-color: var(--gondola-black);">
+                    Hii ni rangi ya utulivu na weledi (Professionalism). Inatumika kutoa msisitizo wa kiwango cha juu.
+                </div>
             </div>
         </div>
     </div>
@@ -255,7 +270,9 @@
 </div>
 
 <div class="footer">
-    &copy; 2026 Leora Tech Solutions. All Rights Reserved. <br>
+    &copy; <span class="digit-1">2</span><span class="digit-2">0</span><span class="digit-3">2</span><span class="digit-4">6</span> 
+    <span class="f-leora">Leora</span> <span class="f-tech">Tech</span> <span class="f-solutions">Solutions</span>. 
+    All Rights Reserved. <br>
     <em>"Leora: The Leader in Tech Solutions"</em>
 </div>
 
