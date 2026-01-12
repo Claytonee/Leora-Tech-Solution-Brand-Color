@@ -45,7 +45,7 @@
         header span.solutions { color: var(--leora-red); }
 
         .container {
-            max-width: 1100px;
+            max-width: 1400px; /* Nimeongeza upana ili kadi 4 zenye maneno mengi zitoshee vizuri */
             margin: 40px auto;
             padding: 0 20px;
         }
@@ -65,8 +65,9 @@
         /* Color Card Styles */
         .color-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            /* Hapa ndipo tunapozilazimisha kadi 4 kukaa mstari mmoja kwenye PC */
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
         }
 
         .card {
@@ -75,11 +76,12 @@
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             transition: transform 0.3s ease;
-            /* Tumeset border iwe 2px kama ile ya red */
             border: 2px solid transparent; 
+            display: flex;
+            flex-direction: column;
         }
 
-        /* Hapa tunaweka border kwa kila rangi kama ile design ya Red */
+        /* Hapa tunaweka border kwa kila rangi kama ulivyotaka */
         .blue-border { border: 2px solid var(--klein-blue); }
         .turquoise-border { border: 2px solid var(--turquoise); }
         .red-border { border: 2px solid var(--leora-red); }
@@ -90,35 +92,39 @@
         }
 
         .color-preview {
-            height: 150px;
+            height: 120px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1rem;
+            text-align: center;
+            padding: 10px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         .card-content {
-            padding: 25px;
+            padding: 20px;
+            flex-grow: 1;
         }
 
         .card-content h2 {
             margin-top: 0;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
+            gap: 5px;
         }
 
         .hex-code {
             font-family: monospace;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             background: #eee;
-            padding: 4px 8px;
+            padding: 2px 6px;
             border-radius: 4px;
             color: #333;
+            width: fit-content;
         }
 
         .tagline {
@@ -126,11 +132,13 @@
             color: #666;
             margin-bottom: 15px;
             display: block;
+            font-size: 0.9rem;
         }
 
         ul {
-            padding-left: 20px;
+            padding-left: 18px;
             margin: 0;
+            font-size: 0.9rem;
         }
 
         li {
@@ -140,9 +148,9 @@
         .highlight-box {
             background: #f9f9f9;
             border-left: 4px solid #ddd;
-            padding: 15px;
+            padding: 12px;
             margin-top: 15px;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
         }
 
         .secondary-colors {
@@ -160,7 +168,7 @@
             color: #888;
         }
 
-        /* --- New Footer Specific Styles --- */
+        /* Footer Color Classes */
         .f-leora { color: var(--klein-blue); font-weight: bold; }
         .f-tech { color: var(--turquoise); font-weight: bold; }
         .f-solutions { color: var(--leora-red); font-weight: bold; }
@@ -169,7 +177,12 @@
         .digit-3 { color: var(--leora-red); font-weight: bold; }
         .digit-4 { color: var(--blue-ribbon); font-weight: bold; }
 
+        /* Responsive kwa ajili ya Simu na Tablet */
+        @media (max-width: 1024px) {
+            .color-grid { grid-template-columns: repeat(2, 1fr); }
+        }
         @media (max-width: 600px) {
+            .color-grid { grid-template-columns: 1fr; }
             header h1 { font-size: 1.8rem; }
         }
     </style>
